@@ -1,0 +1,10 @@
+Dear ImGui
+	https://github.com/ocornut/imgui
+
+UNCI Documentation 
+(Also, special thanks to Blaheta for help with vector tests!):
+	http://cs.longwood.edu/~dblaheta/unci/
+
+std::variant
+	https://en.cppreference.com/w/cpp/utility/variant
+	https://stackoverflow.com/questions/47168477/how-to-stream-stdvariant

@@ -1,0 +1,86 @@
+#include "gates.h"
+
+test suite gates
+{
+	tests:
+	test NOT
+	{
+		check(NOT(true)) expect false;
+		check(NOT(false)) expect true;
+	}
+
+	test OR
+	{
+		std::vector<std::variant<int, std::string>> test1;	
+		test1.push_back(1);
+		std::vector<std::variant<int, std::string>> test2;
+		test2.push_back(0);
+	
+		check(OR(test1, test1)) expect true;
+		check(OR(test1, test2)) expect true;
+		check(OR(test2, test1)) expect true;
+		check(OR(test2, test2)) expect false;
+	}
+
+	test AND
+	{
+		std::vector<std::variant<int, std::string>> test1;	
+		test1.push_back(1);
+		std::vector<std::variant<int, std::string>> test2;
+		test2.push_back(0);
+	
+		check(AND(test1, test1)) expect true;
+		check(AND(test1, test2)) expect false;
+		check(AND(test2, test1)) expect false;
+		check(AND(test2, test2)) expect false;
+	}
+	
+	test XOR
+	{
+		std::vector<std::variant<int, std::string>> test1;	
+		test1.push_back(1);
+		std::vector<std::variant<int, std::string>> test2;
+		test2.push_back(0);
+	
+		check(XOR(test1, test1)) expect false;
+		check(XOR(test1, test2)) expect true;
+		check(XOR(test2, test1)) expect true;
+		check(XOR(test2, test2)) expect false;
+	}
+
+	test NOR
+	{
+		std::vector<std::variant<int, std::string>> test1;	
+		test1.push_back(1);
+		std::vector<std::variant<int, std::string>> test2;
+		test2.push_back(0);
+	
+		check(NOR(test1, test1)) expect false;
+		check(NOR(test1, test2)) expect false;
+		check(NOR(test2, test1)) expect false;
+		check(NOR(test2, test2)) expect true;
+	}
+
+	test NAND
+	{
+		std::vector<std::variant<int, std::string>> test1;	
+		test1.push_back(1);
+		std::vector<std::variant<int, std::string>> test2;
+		test2.push_back(0);
+	
+		check(NAND(test1, test1)) expect false;
+		check(NAND(test1, test2)) expect true;
+		check(NAND(test2, test1)) expect true;
+		check(NAND(test2, test2)) expect true;
+	}
+
+	/*
+	test SPLIT
+	{
+		check(SPLIT(true, 3)) expect == std::vector<bool>{true, true, true};
+		check(SPLIT(true, 4)) expect == std::vector<bool>{true, true, true, true};
+		check(SPLIT(false, 5)) expect == std::vector<bool>{false, false, false, false, false};;
+		check(SPLIT(false, 2)) expect == std::vector<bool>{false, false};
+	}
+	*/
+}

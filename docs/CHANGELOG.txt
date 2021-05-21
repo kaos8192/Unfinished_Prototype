@@ -1,0 +1,118 @@
+TODO: Fill the document of change with the fabric of reality
+      or updates.
+<<<<<<< HEAD
+
+16:00 - 4/10/2020
+	-README.txt
+		-Properly labelled the two seperate sections of the README into
+		 Terminal and GUI.
+		-Split up information in Terminal section into two subsections:
+			-Compile commands:
+				-More explanation on each Makefile command.
+			-./create commands:
+				-Added "Help" section commands and explanations.
+				-Added END command information.
+				-Removed comment that SPLIT command doesn't work.
+		-Cleaned up the Terminal section to make it much more readable.
+	-test.cpp
+		-Added first-boot message to help user understand what to do. This
+		 includes the purpose of the program, HELP commands, and prompting 
+		 the user for their input. No longer is it just a blank screen at 
+		 runtime.
+		-Added a "HELP" family of commands. These commands are used to help 
+		 users who do not have the README opened to refer to Syntax or 
+		 arguments. These commands include:
+			-HELP: Will print out all help information all at once.
+			-INPUT: Tells user what the valid inputs and operations are.
+			-SYNTAX: Gives the user the correct, usable syntax for various
+			 commands.
+			-GLOSSARY: A glossary of definitions for the Gates, in case the
+			 user never heard of them before, along with examples of input
+			 and output.
+		-SPLIT command now had proper error-handling of incorrect inputs.
+		-Fixed a bug where SPLIT would give too many/too little outputs
+		 for numbers greater than 10.
+	-gates.cpp
+		-Added helpText function, which prints information based on which
+		 HELP command was typed into the Terminal.
+	-Removed temp.h
+
+
+17:55 − 4/9/2020
+    Canvas is now the "background" of the screen.
+    File -> Quit and CTRL+SHIFT+Q can close the program.
+        File -> Quit will display a confirmation prompt,
+        The key shortcut does not.
+    Dear ImGui Demo and Metrics can be opened using
+    Debug -> DIG Demo and Debug -> DIG Metrics or
+    CTRL+SHIFT+; and CTRL+ALT+; respectively.
+
+
+19:15 − 4/7/2020
+    Lines can now be removed from the canvas using the delete key.
+    Verified MacOS support for gui with Brady Davis' help.
+    Lines are now an easier to see blue and are thicker.
+    Small cleanup of gui_main.cpp.
+
+
+19:00 − 4/5/2020
+    Edited README.txt.
+    Fixed maker/compa_it.
+        The compa_it script will now run the GUI executable.
+
+
+18:30 − 4/5/2020
+    Organizational:
+        Restructured the directories for the entire project for better navigation.
+        Improved GUI Makefile to begin cross-platform development and optimize project size.
+    Code:
+        Makefile updated to account for MacOS and Windows.
+        Windows compilation files added.
+        gui_main.cpp:
+            Now accounts for MacOS configuration settings.
+            SDL2 Version checker added.
+            Basic user controlled line drawing prototype added (modified from ImGui example).
+            Bugs to fix:
+                Undo hotkey doesn't work.
+            Features to add:
+                Make canvas window blend into root window.
+                Add drag-and-drop gates.
+                Add buttons and hotkey support.
+                Link into the backend.
+                Connect gui_console.cpp.
+
+
+16:43 -- 4/5/2020
+	Added rudementary console, still underconstruction based on the console-demo from imgui.
+	Created gui_console.cpp for it within the gui-master
+	Still need comments and some testing, but the basic framework is their strimmed down for us to continue building.
+
+
+23:05 -- 4/4/2020
+	Changed comments in gates.h to match those given in gates.cpp. That said:
+	Added comments to gates.cpp, as well, including:
+		1: Function descriptions -- what exactly the function does or
+		   returns.
+		2: Comments that give more detail inside the functions, themselves.
+
+
+19:52 -- 4/4/2020
+	Added some QOL additions
+	1: Invalid inputs (i.e. not a gate, true, or false) will invalidate the
+	   entire input.
+	2: All types of inputs for true and false (All Capital, One Capital)
+	   are now valid inputs.
+	3: Comments are now in test.cpp to explain what is happening.
+
+
+4/2/2020
+	Saving is working :)
+
+
+=======
+
+16:45 -- 4/2/2020
+	Fixed compiler error for ./create.
+
+
+>>>>>>> a5d6b8c60009093b194a4e38e4ffdddb1cf246a3
